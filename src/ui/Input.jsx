@@ -5,7 +5,6 @@ const Input = styled.input`
   text-align: right;
   width: 100%;
   color: var(--very-dark-cyan);
-  position: relative;
   padding-right: 4px;
 
   &:focus {

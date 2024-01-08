@@ -28,11 +28,12 @@ body {
   min-height: 100vh;
   line-height: 1.5;
   background-color: var(--light-grayish-cyan);
-  max-width: 1140px;
+  max-width: 960px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  color: var(--dark-grayish-cyan);
 }
 
 button,
@@ -40,10 +41,27 @@ input {
   border: none;
   outline: none;
   padding: 12px 0;
-  border-radius: 8px;
+  border-radius: 6px;
   cursor: pointer;
   font-weight: bold;
   font-size: var(--inputs-font);
+}
+
+.hide {
+  display: none;
+}
+
+.selected {
+  background-color: var(--strong-cyan);
+    color: var(--very-dark-cyan);
+}
+
+.error {
+  outline: 2px solid coral;
+}
+
+.error:focus {
+  outline: 2px solid coral;
 }
 `;
 

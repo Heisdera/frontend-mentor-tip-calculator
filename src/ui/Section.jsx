@@ -4,8 +4,8 @@ const Section = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* width: 100%; */
   gap: 24px;
+  padding: 4px 6px;
 `;
 
 export default Section;

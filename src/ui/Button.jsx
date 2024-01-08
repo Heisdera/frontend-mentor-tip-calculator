@@ -8,10 +8,12 @@ const Button = styled.button`
     background-color: var(--strong-cyan);
     color: var(--very-dark-cyan);
   }
+
   &:active {
     background-color: var(--strong-cyan);
     color: var(--very-dark-cyan);
   }
+
   &:focus {
     background-color: var(--strong-cyan);
     color: var(--very-dark-cyan);

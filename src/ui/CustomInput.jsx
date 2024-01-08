@@ -5,7 +5,7 @@ const CustomInput = styled(Input)`
   padding-right: 4px;
 
   &::placeholder {
-    padding-right: 8px;
+    padding-right: 4px;
   }
 `;
 

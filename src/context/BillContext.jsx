@@ -1,47 +1,47 @@
-import { createContext, useContext } from "react";
+import { useState, createContext } from 'react';
 
-const BillContext = createContext();
+export const BillContext = createContext();
 
 function BillSplitterProvider({ children }) {
-  const [bill, setBill] = useState("");
-  const [tipPercentage, setTipPercentage] = useState("");
-  const [customTipPercent, setCustomTipPercent] = useState("");
-  const [numberOfPeople, setNumberOfPeople] = useState("");
+  const [bill, setBill] = useState('');
+  const [tipPercentage, setTipPercentage] = useState('');
+  const [customTipPercent, setCustomTipPercent] = useState('');
+  const [numberOfPeople, setNumberOfPeople] = useState('');
 
   const tipAmount = bill * tipPercentage;
   const tipAmountPerPerson = tipAmount / numberOfPeople;
   const totalPerPerson = (bill + tipAmount) / numberOfPeople;
 
-  const noPersonSelected = numberOfPeople === "" || numberOfPeople === null;
+  const noPersonSelected = numberOfPeople === '' || numberOfPeople === null;
 
   function handleSetBill(e) {
-    setBill(Number(e.target.value) === 0 ? null : Number(e.target.value));
+    setBill(Number(e.target.value) <= 0 ? null : Number(e.target.value));
   }
 
   function handleTipChange(e) {
     e.preventDefault();
     setTipPercentage(Number(e.target.value) / 100);
-    setCustomTipPercent("");
+    setCustomTipPercent('');
   }
 
   function handleCustomTipChange(e) {
     setCustomTipPercent(
-      Number(e.target.value) === 0 ? null : Number(e.target.value),
+      Number(e.target.value) <= 0 ? null : Number(e.target.value)
     );
     setTipPercentage(Number(e.target.value) / 100);
   }
 
   function handleSetNumPeople(e) {
     setNumberOfPeople(
-      Number(e.target.value) === 0 ? null : Number(e.target.value),
+      Number(e.target.value) <= 0 ? null : Number(e.target.value)
     );
   }
 
   function handleReset() {
-    setBill("");
-    setTipPercentage("");
-    setCustomTipPercent("");
-    setNumberOfPeople("");
+    setBill('');
+    setTipPercentage('');
+    setCustomTipPercent('');
+    setNumberOfPeople('');
   }
 
   return (
@@ -50,6 +50,9 @@ function BillSplitterProvider({ children }) {
         bill,
         handleSetBill,
         handleTipChange,
+        customTipPercent,
+        handleCustomTipChange,
+        tipPercentage,
         numberOfPeople,
         handleSetNumPeople,
         tipAmountPerPerson,
@@ -63,14 +66,4 @@ function BillSplitterProvider({ children }) {
   );
 }
 
-function useBillSplitter() {
-  const context = useContext(BillContext);
-
-  if (context === undefined) {
-    throw new Error("bill context was used outside the bill splitter provider");
-  }
-
-  return context;
-}
-
-export { BillSplitterProvider, useBillSplitter };
+export default BillSplitterProvider;
