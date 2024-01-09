@@ -43,7 +43,7 @@ export default function App() {
       <GlobalStyles />
 
       <header>
-        <Logo role='banner' src='../images/logo.svg' alt='logo' />
+        <Logo src='../images/logo.svg' alt='logo' />
       </header>
 
       <Container>
