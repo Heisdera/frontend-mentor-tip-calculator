@@ -19,6 +19,8 @@ import FlexRowDiv from './ui/FlexRowDiv';
 import FlexColDiv from './ui/FlexColDiv';
 import ResetButton from './ui/ResetButton';
 import PersonSpan from './ui/PersonSpan';
+import Footer from './ui/Footer';
+import Link from './ui/Link';
 
 export default function App() {
   const {
@@ -167,6 +169,21 @@ export default function App() {
           </ResetButton>
         </ResultSection>
       </Container>
+
+      <Footer>
+        Challenge by{' '}
+        <Link
+          href='https://www.frontendmentor.io?ref=challenge'
+          target='_blank'
+        >
+          Frontend Mentor
+        </Link>
+        . Coded by{' '}
+        <Link href='https://www.github.com/Heisdera' target='_blank'>
+          Raphael Wisdom
+        </Link>
+        .
+      </Footer>
     </>
   );
 }

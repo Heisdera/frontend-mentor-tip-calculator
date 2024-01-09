@@ -7,8 +7,12 @@ const Input = styled.input`
   color: var(--very-dark-cyan);
   padding-right: 4px;
 
+  &:hover {
+    outline: 2px solid var(--strong-cyan);
+  }
+
   &:focus {
-    outline: 2px solid var(--grayish-cyan);
+    outline: 2px solid var(--strong-cyan);
   }
 `;
 
