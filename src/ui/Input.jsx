@@ -7,6 +7,14 @@ const Input = styled.input`
   color: var(--very-dark-cyan);
   padding-right: 4px;
 
+  &.error {
+    outline: 2px solid coral;
+  }
+
+  &.error:focus {
+    outline: 2px solid coral;
+  }
+
   &:hover {
     outline: 2px solid var(--strong-cyan);
   }

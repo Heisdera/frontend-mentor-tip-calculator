@@ -3,7 +3,7 @@ import { useBillSplitter } from './context/useBillSplitter';
 import GlobalStyles from './styles/GlobalStyles';
 import Container from './ui/Container';
 import Logo from './ui/Logo';
-import Section from './ui/Section';
+import Form from './ui/Form';
 import ResultSection from './ui/ResultSection';
 import Label from './ui/Label';
 import Input from './ui/Input';
@@ -27,6 +27,7 @@ export default function App() {
     bill,
     handleSetBill,
     handleTipChange,
+    setTipPercentage,
     customTipPercent,
     handleCustomTipChange,
     tipPercentage,
@@ -41,10 +42,10 @@ export default function App() {
     <>
       <GlobalStyles />
 
-      <Logo src='../images/logo.svg' />
+      <Logo src='../images/logo.svg' alt='logo' />
 
       <Container>
-        <Section>
+        <Form>
           <RelativeDiv>
             <Label htmlFor='bill'>Bill</Label>
 
@@ -65,6 +66,7 @@ export default function App() {
             <ButtonWrapper>
               <Button
                 className={`${tipPercentage === 0.05 && 'selected'}`}
+                type='button'
                 value='5'
                 onClick={handleTipChange}
               >
@@ -73,6 +75,7 @@ export default function App() {
 
               <Button
                 className={`${tipPercentage === 0.1 && 'selected'}`}
+                type='button'
                 value='10'
                 onClick={handleTipChange}
               >
@@ -81,6 +84,7 @@ export default function App() {
 
               <Button
                 className={`${tipPercentage === 0.15 && 'selected'}`}
+                type='button'
                 value='15'
                 onClick={handleTipChange}
               >
@@ -89,6 +93,7 @@ export default function App() {
 
               <Button
                 className={`${tipPercentage === 0.25 && 'selected'}`}
+                type='button'
                 value='25'
                 onClick={handleTipChange}
               >
@@ -97,6 +102,7 @@ export default function App() {
 
               <Button
                 className={`${tipPercentage === 0.5 && 'selected'}`}
+                type='button'
                 value='50'
                 onClick={handleTipChange}
               >
@@ -134,7 +140,7 @@ export default function App() {
 
             <AbsoluteIcon src='../images/icon-person.svg' alt='dollar-icon' />
           </RelativeDiv>
-        </Section>
+        </Form>
 
         <ResultSection>
           <FlexColDiv>

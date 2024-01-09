@@ -50,6 +50,7 @@ function BillSplitterProvider({ children }) {
         bill,
         handleSetBill,
         handleTipChange,
+        setTipPercentage,
         customTipPercent,
         handleCustomTipChange,
         tipPercentage,

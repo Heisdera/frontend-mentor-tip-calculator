@@ -46,23 +46,6 @@ input {
   font-weight: bold;
   font-size: var(--inputs-font);
 }
-
-.hide {
-  display: none;
-}
-
-.selected {
-  background-color: var(--strong-cyan);
-    color: var(--very-dark-cyan);
-}
-
-.error {
-  outline: 2px solid coral;
-}
-
-.error:focus {
-  outline: 2px solid coral;
-}
 `;
 
 export default GlobalStyles;

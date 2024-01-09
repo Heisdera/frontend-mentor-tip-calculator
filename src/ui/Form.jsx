@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Section = styled.section`
+const Form = styled.form`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -8,4 +8,4 @@ const Section = styled.section`
   padding: 4px 6px;
 `;
 
-export default Section;
+export default Form;

@@ -1,7 +1,11 @@
 import styled from 'styled-components';
-import Section from './Section';
 
-const ResultSection = styled(Section)`
+const ResultSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 4px 6px;
   background: var(--very-dark-cyan);
   border-radius: 14px;
   display: flex;

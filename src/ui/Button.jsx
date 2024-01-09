@@ -4,6 +4,11 @@ const Button = styled.button`
   background-color: var(--very-dark-cyan);
   color: var(--white-color);
 
+  &.selected {
+    background-color: var(--strong-cyan);
+    color: var(--very-dark-cyan);
+  }
+
   &:hover {
     background-color: var(--strong-cyan);
     color: var(--very-dark-cyan);
