@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [[Add solution URL here](https://your-solution-url.com](https://www.frontendmentor.io/challenges/testimonials-grid-section-Nnw6J7Un7/))
-- Live Site URL: [Vercel](https://frontend-mentor-testimonials-grid-section-lake.vercel.app/)
+- Solution URL: [solution URL](https://www.frontendmentor.io/solutions/tip-calculator-using-styled-components-4SDCdWLuhN)
+- Live Site URL: [Vercel](https://frontend-mentor-tip-calculator-blond.vercel.app/)
 
 ## My process
 
